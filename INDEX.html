@@ -317,6 +317,7 @@
     track.addEventListener("mousedown", (e) => {
       isDragging = true;
       isAuto = false;
+      hasDragged = false; // RESET
       startX = e.clientX;
       lastPosition = position;
       track.style.cursor = "grabbing";
@@ -325,6 +326,11 @@
     window.addEventListener("mousemove", (e) => {
       if (!isDragging) return;
       const delta = e.clientX - startX;
+
+      if (Math.abs(delta) > 5) {
+        hasDragged = true; // DIANGGAP DRAG
+      }
+
       position = lastPosition + delta;
       track.style.transform = `translateX(${position}px)`;
     });
@@ -337,11 +343,16 @@
     });
 
     // TOUCH (MOBILE)
-    track.addEventListener("touchstart", (e) => {
-      isDragging = true;
-      isAuto = false;
-      startX = e.touches[0].clientX;
-      lastPosition = position;
+    track.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
+      const delta = e.touches[0].clientX - startX;
+
+      if (Math.abs(delta) > 5) {
+        hasDragged = true;
+      }
+
+      position = lastPosition + delta;
+      track.style.transform = `translateX(${position}px)`;
     });
 
     track.addEventListener("touchmove", (e) => {
@@ -363,6 +374,8 @@
 
     track.querySelectorAll(".project-card").forEach(card => {
       card.addEventListener("click", () => {
+        if (hasDragged) return; // JIKA DRAG, STOP
+
         modalTitle.textContent = card.dataset.title;
         modalDesc.textContent = card.dataset.desc;
         modal.classList.remove("hidden");
