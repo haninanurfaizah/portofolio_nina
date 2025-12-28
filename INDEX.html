@@ -116,19 +116,113 @@
 
         <!-- CARD -->
         <div class="card-project">
-          <img src="Screenshot 2025-12-16 072030.png" alt="Project 1">
+          <img src="Screenshot 2025-12-16 072030.png" alt="Project 1" />
 
           <div class="card-project__content">
-            <p class="card-project__title">Web Informasi Data Mahasiswa
+            <p class="card-project__title">
+              Web Informasi Data Mahasiswa
             </p>
-            <p class="card-project__description line-clamp-3 text-sm text-gray-600 dark:text-slate-300">
 
+            <!-- PREVIEW (SATU BARIS SAJA) -->
+            <p class="card-project__description line-clamp-1 text-sm text-gray-600 dark:text-slate-300">
               Program Pengelolaan Data Mahasiswa Menggunakan Function dan Array
             </p>
-            <button
-              class="px-6 py-3 mt-4 rounded-xl border border-gray-300 hover:border-primary hover:text-primary">Show</button>
+
+            <!-- FULL CONTENT UNTUK MODAL -->
+            <div id="desc-project-1" class="hidden">
+              <p>Program Pengelolaan Data Mahasiswa Menggunakan Function dan Array</p>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, incidunt.</p>
+
+              <ul>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+              </ul>
+
+              <p><b>Lorem ipsum dolor sit amet.</b></p>
+
+              <ul>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+              </ul>
+              <p><b>Lorem ipsum dolor sit amet.</b></p>
+
+              <ul>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+              </ul>
+              <p><b>Lorem ipsum dolor sit amet.</b></p>
+
+              <ul>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+              </ul>
+              <p><b>Lorem ipsum dolor sit amet.</b></p>
+
+              <ul>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+              </ul>
+              <p><b>Lorem ipsum dolor sit amet.</b></p>
+
+              <ul>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+              </ul>
+              <p><b>Lorem ipsum dolor sit amet.</b></p>
+
+              <ul>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+              </ul>
+              <p><b>Lorem ipsum dolor sit amet.</b></p>
+
+              <ul>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+                <li>- 1</li>
+              </ul>
+            </div>
+
+            <!-- BUTTON TRIGGER -->
+            <button data-modal="project-1"
+              class="px-6 py-3 mt-4 rounded-xl border border-gray-300 hover:border-primary hover:text-primary">
+              Show
+            </button>
           </div>
         </div>
+
 
         <!-- COPY CARD (samakan sampai 10 / 15) -->
         <div class="card-project">
@@ -237,19 +331,36 @@
   </footer>
 
   <!-- ================= PROJECT MODAL ================= -->
-  <div id="projectModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm">
-    <div class="bg-white dark:bg-slate-900 rounded-2xl w-full max-w-md p-6 relative animate-fadeIn">
-      <button id="closeModal"
-        class="absolute top-4 right-4 text-xl text-gray-400 hover:text-gray-600 dark:hover:text-white">
+  <div id="projectModal" class="fixed inset-0 z-50 hidden items-center justify-center
+         bg-black/50 backdrop-blur-sm">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl
+    w-full
+    max-w-lg md:max-w-2xl lg:max-w-4xl
+    max-h-[85vh]
+    relative flex flex-col">
+      <!-- CLOSE -->
+      <button id="closeModal" class="absolute top-4 right-4 z-10
+             text-xl text-gray-400 hover:text-gray-600
+             dark:hover:text-white">
         ✕
       </button>
 
-      <img id="modalImage" src="" alt="" class="w-full h-40 object-contain mb-4" />
+      <!-- HEADER / IMAGE (FIXED) -->
+      <div class="p-6 border-b border-gray-200 dark:border-slate-700">
+        <img id="modalImage" src="" alt="" class="w-full h-40 object-contain mb-4" />
 
-      <h4 id="modalTitle" class="text-xl font-bold mb-2"></h4>
-      <p id="modalDesc" class="text-sm text-gray-600 dark:text-slate-300"></p>
+        <h4 id="modalTitle" class="text-xl font-bold"></h4>
+      </div>
+
+      <!-- SCROLLABLE CONTENT -->
+      <div id="modalDesc" class="p-6 overflow-y-auto
+             text-sm text-gray-600 dark:text-slate-300
+             space-y-4">
+        <!-- konten panjang di sini -->
+      </div>
     </div>
   </div>
+
 
 
 </body>
@@ -260,6 +371,30 @@
 <style>
   .skill-card {
     @apply bg-white rounded-2xl p-6 text-center font-semibold shadow hover:shadow-md transition;
+  }
+
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  #modalDesc {
+    scrollbar-width: thin;
+  }
+
+  #modalDesc::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  #modalDesc::-webkit-scrollbar-thumb {
+    background: #cbd5f5;
+    border-radius: 999px;
+  }
+
+  .dark #modalDesc::-webkit-scrollbar-thumb {
+    background: #334155;
   }
 
   .client-card {
@@ -494,17 +629,21 @@
     });
   });
 
-  document.querySelectorAll(".card-project button").forEach(btn => {
+
+
+  document.querySelectorAll("[data-modal]").forEach(btn => {
     btn.addEventListener("click", () => {
       const card = btn.closest(".card-project");
 
-      const img = card.querySelector("img").src;
-      const title = card.querySelector(".card-project__title").textContent;
-      const desc = card.querySelector(".card-project__description").textContent;
+      const img = card.querySelector("img")?.src || "";
+      const title = card.querySelector(".card-project__title")?.textContent || "";
+
+      const modalKey = btn.dataset.modal;
+      const fullDesc = document.getElementById(`desc-${modalKey}`);
 
       document.getElementById("modalImage").src = img;
       document.getElementById("modalTitle").textContent = title;
-      document.getElementById("modalDesc").textContent = desc;
+      document.getElementById("modalDesc").innerHTML = fullDesc.innerHTML;
 
       const modal = document.getElementById("projectModal");
       modal.classList.remove("hidden");
@@ -519,8 +658,7 @@
     modal.classList.remove("flex");
   });
 
-  // CLOSE ON BACKDROP CLICK
-  document.getElementById("projectModal").addEventListener("click", (e) => {
+  document.getElementById("projectModal").addEventListener("click", e => {
     if (e.target.id === "projectModal") {
       e.target.classList.add("hidden");
       e.target.classList.remove("flex");
