@@ -41,6 +41,7 @@
         <a href="#skills" class="hover:text-primary dark:hover:text-blue-400">Skills</a>
         <a href="#projects" class="hover:text-primary dark:hover:text-blue-400">Projects</a>
         <a href="#client" class="hover:text-primary dark:hover:text-blue-400">Client</a>
+        <a href="#galery_vidio_audio" class="hover:text-primary dark:hover:text-blue-400">Galery / Vidio / Audio</a>
         <a href="#contact" class="hover:text-primary dark:hover:text-blue-400">Contact</a>
       </nav>
 
@@ -104,6 +105,56 @@
         mempelajari analisis sistem, basis data, dan pengembangan aplikasi berbasis web.
   </section>
 
+  <!-- ================= Galery ================= -->
+  <section id="galery_vidio_audio" class="py-24 bg-white dark:bg-slate-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-8 text-center">
+        Gallery / Video / Audio
+      </h3>
+
+      <!-- TAB BUTTON -->
+      <div class="flex justify-center gap-4 mb-10">
+        <button class="tab-btn active-tab" data-tab="gallery">Gallery</button>
+        <button class="tab-btn" data-tab="video">Video</button>
+        <button class="tab-btn" data-tab="audio">Audio</button>
+      </div>
+
+      <!-- ===== CONTENT ===== -->
+
+      <!-- GALLERY -->
+      <div id="gallery" class="tab-content grid grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="./asset/img_hanina_1.jpeg" class="media-card" alt="">
+        <img src="./asset/img_hanina_2.jpeg" class="media-card" alt="">
+        <img src="./asset/img_hanina_3.jpeg" class="media-card" alt="">
+      </div>
+
+      <!-- VIDEO -->
+      <div id="video" class="tab-content hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+        <video controls class="media-card-vidio">
+          <source src="./asset/vidio_hanina_1.mp4" type="video/mp4">
+        </video>
+
+        <video controls class="media-card-vidio">
+          <source src="./asset/vidio_hanina_2.mp4" type="video/mp4">
+        </video>
+        <video controls class="media-card-vidio">
+          <source src="./asset/img_hanina_4.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- AUDIO -->
+      <div id="audio" class="tab-content hidden space-y-4">
+        <audio controls class="w-full">
+          <source src="./asset/audio_1.mp4" type="audio/mpeg">
+        </audio>
+
+        <audio controls class="w-full">
+          <source src="./asset/audio_2.mp4" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= PROJECTS ================= -->
 
   <section id="projects" class="py-24 bg-slate-50 dark:bg-slate-700">
@@ -130,13 +181,15 @@
 
             <!-- FULL CONTENT UNTUK MODAL -->
             <div id="desc-project-1" class="hidden">
-              
+
               <p><b>Deskripsi Project</b></p>
-              <p>Project ini merupakan program sederhana yang dibuat untuk mengelola data mahasiswa dengan memanfaatkan array sebagai media penyimpanan data dan function untuk mengatur alur proses program. Program mampu menampilkan
-                 informasi mahasiswa secara terstruktur, termasuk nama, NIM, dan usia.</p>
+              <p>Project ini merupakan program sederhana yang dibuat untuk mengelola data mahasiswa dengan memanfaatkan
+                array sebagai media penyimpanan data dan function untuk mengatur alur proses program. Program mampu
+                menampilkan
+                informasi mahasiswa secara terstruktur, termasuk nama, NIM, dan usia.</p>
               <p><b>Fungsi Utama Program</b></p>
               <ul>
-              
+
                 <li>Menyimpan data mahasiswa ke dalam array</li>
                 <li>Menggunakan function untuk</li>
                 <li>Menginput data mahasiswa</li>
@@ -163,9 +216,9 @@
                 <li>Mengimplementasikan logika dasar pemrograman dalam studi kasus data mahasiswa</li>
               </ul>
               <p>Hasil yang Dicapai<br>
-                  Program dapat menampilkan data mahasiswa beserta usia dengan baik, 
-                  serta memudahkan pengelolaan data melalui pemisahan fungsi-fungsi utama.</p>
-              
+                Program dapat menampilkan data mahasiswa beserta usia dengan baik,
+                serta memudahkan pengelolaan data melalui pemisahan fungsi-fungsi utama.</p>
+
             </div>
 
             <!-- BUTTON TRIGGER -->
@@ -188,18 +241,19 @@
 
             <!-- PREVIEW (SATU BARIS SAJA) -->
             <p class="card-project__description line-clamp-1 text-sm text-gray-600 dark:text-slate-300">
-              Program informasi Data Mahasiswa 
+              Program informasi Data Mahasiswa
             </p>
 
             <!-- FULL CONTENT UNTUK MODAL -->
             <div id="desc-project-1" class="hidden">
-              
+
               <p><b>Deskripsi Project</b></p>
-              <p>Project ini merupakan pembuatan website statis sederhana yang berfungsi untuk menampilkan profil biodata pribadi. Website 
+              <p>Project ini merupakan pembuatan website statis sederhana yang berfungsi untuk menampilkan profil
+                biodata pribadi. Website
                 dirancang dengan tampilan yang sederhana, informatif, dan mudah dipahami oleh pengguna.</p>
               <p><b>Fungsi Utama Program</b></p>
               <ul>
-              
+
                 <li>Menampilkan informasi biodata</li>
                 <li>Nama</li>
                 <li>Tempat & tanggal lahir</li>
@@ -216,7 +270,7 @@
                 <li>HTML (struktur halaman)</li>
                 <li>CSS (tata letak dan desain tampilan)</li>
                 <li>(Opsional) JavaScript untuk interaksi sederhana</li>
-    
+
               </ul>
               <p><b>Tujuan Project</b></p>
 
@@ -226,8 +280,9 @@
                 <li>Membuat website profil sebagai media perkenalan diri secara online</li>
               </ul>
               <p>Hasil yang Dicapai<br>
-                 Website berhasil menampilkan biodata secara jelas dan terstruktur dengan desain sederhana, sehingga dapat digunakan sebagai halaman profil pribadi atau latihan dasar web development.
-            </p>
+                Website berhasil menampilkan biodata secara jelas dan terstruktur dengan desain sederhana, sehingga
+                dapat digunakan sebagai halaman profil pribadi atau latihan dasar web development.
+              </p>
             </div>
 
             <!-- BUTTON TRIGGER -->
@@ -247,22 +302,24 @@
 
             <!-- PREVIEW (SATU BARIS SAJA) -->
             <p class="card-project__description line-clamp-1 text-sm text-gray-600 dark:text-slate-300">
-              
 
-            <!-- FULL CONTENT UNTUK MODAL -->
+
+              <!-- FULL CONTENT UNTUK MODAL -->
             <div id="desc-project-1" class="hidden">
               <p><b>Deskripsi Project</b><br>
-              Project ini merupakan pembuatan function JavaScript yang digunakan untuk menghitung total belanja berdasarkan daftar harga 
-              barang yang dipilih oleh pengguna. Data harga disimpan dalam bentuk variabel atau array, kemudian diproses 
-              menggunakan function agar perhitungan lebih terstruktur dan mudah digunakan kembali.<br>
-            </p>
+                Project ini merupakan pembuatan function JavaScript yang digunakan untuk menghitung total belanja
+                berdasarkan daftar harga
+                barang yang dipilih oleh pengguna. Data harga disimpan dalam bentuk variabel atau array, kemudian
+                diproses
+                menggunakan function agar perhitungan lebih terstruktur dan mudah digunakan kembali.<br>
+              </p>
               <p><b>Fungsi Utama</b></p>
-              
+
               <ul>
-		          <li> Menginput daftar harga barang </li>
-	            <li>Menghitung total belanja menggunakan function</li>
-	            <li>Menampilkan hasil total belanja ke halaman web</li>
-            	<li>Mendukung perhitungan otomatis saat data berubah</li>
+                <li> Menginput daftar harga barang </li>
+                <li>Menghitung total belanja menggunakan function</li>
+                <li>Menampilkan hasil total belanja ke halaman web</li>
+                <li>Mendukung perhitungan otomatis saat data berubah</li>
               </ul>
 
               <p><b>Teknologi yang Digunakan</b></p>
@@ -281,9 +338,9 @@
                 <li>Mengintegrasikan JavaScript dengan tampilan web</li>
               </ul>
               <p><b>Hasil yang Dicapai</b><br>
-                  Program dapat menampilkan data mahasiswa beserta usia dengan baik, 
-                  serta memudahkan pengelolaan data melalui pemisahan fungsi-fungsi utama.</p>
-              
+                Program dapat menampilkan data mahasiswa beserta usia dengan baik,
+                serta memudahkan pengelolaan data melalui pemisahan fungsi-fungsi utama.</p>
+
             </div>
 
             <!-- BUTTON TRIGGER -->
@@ -415,6 +472,41 @@
   .skill-card {
     @apply bg-white rounded-2xl p-6 text-center font-semibold shadow hover:shadow-md transition;
   }
+
+  .tab-btn {
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid #cbd5f5;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .tab-btn:hover {
+    background: #2563eb;
+    color: white;
+  }
+
+  .active-tab {
+    background: #2563eb;
+    color: white;
+  }
+
+  .media-card {
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+  }
+
+  .media-card-vidio {
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+  }
+
 
   .line-clamp-1 {
     display: -webkit-box;
@@ -706,5 +798,20 @@
       e.target.classList.add("hidden");
       e.target.classList.remove("flex");
     }
+  });
+
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // remove active
+      tabButtons.forEach(b => b.classList.remove("active-tab"));
+      tabContents.forEach(c => c.classList.add("hidden"));
+
+      // active selected
+      btn.classList.add("active-tab");
+      document.getElementById(btn.dataset.tab).classList.remove("hidden");
+    });
   });
 </script>
